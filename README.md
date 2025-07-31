@@ -1,4 +1,4 @@
-# DevX‑tool
+## 👾 DevX‑tool
 
 A comprehensive hacking toolkit for Termux platform, offering **300+ categorized tools** with an interactive Bash menu system.
 
