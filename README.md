@@ -12,6 +12,6 @@ A comprehensive hacking toolkit for Termux platform, offering **300+ categorized
 ## 🚀 Quick Start
 ```bash
 pkg update && pkg install git -y
-git clone https://github.com/yourusername/devx-tool.git
+git clone [https://github.com/yourusername/devx-tool.git](https://github.com/TheDarkBoyUnkown/Dev-X.git)
 cd devx-tool
 bash install.sh
