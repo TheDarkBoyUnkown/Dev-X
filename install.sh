@@ -1,15 +1,30 @@
 #!/bin/bash
-clear
-echo "🔧 Installing Dev-X Tool..."
-sleep 1
 
-chmod +x devx.sh
-chmod +x uninstall.sh
-chmod +x update.sh
-chmod +x core/*.sh
-chmod +x tools/*/*.sh
+# Colors
+CYAN='\033[0;36m'
+YELLOW='\033[1;33m'
+RESET='\033[0m'
 
-ln -sf "$PWD/devx.sh" /data/data/com.termux/files/usr/bin/devx
+# Banner
+echo -e "${CYAN}"
+echo "Installing Dev-X Tool..."
+echo -e "${YELLOW}"
 
-echo "✅ Installed successfully!"
-echo "👉 Type 'devx' to launch the tool."
+# Required packages
+pkg install -y git python curl wget figlet toilet
+
+# Optional tools directory
+mkdir -p $PREFIX/share/devx-tools
+
+# Give execute permissions to all scripts
+chmod +x * .devx/*
+
+# Move main script to bin so it's usable system-wide
+cp devx.sh $PREFIX/bin/devx
+chmod +x $PREFIX/bin/devx
+
+# Completion
+echo -e "${CYAN}"
+echo "Dev-X installed successfully!"
+echo -e "${RESET}"
+echo "👉 Type ${YELLOW}devx${RESET} to launch."
